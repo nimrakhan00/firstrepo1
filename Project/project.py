@@ -49,4 +49,35 @@ class Exams(School):
     pass
   
 class Stock(School):
-    pass
+    def __init__(self, name, quantity, price_per_item, category, supplier):
+        self.name = name
+        self.quantity = quantity
+        self.price_per_item = price_per_item
+        self.category = category 
+        self.supplier = supplier
+
+    def get(self):
+        total_value = self.quantity * self.price_per_item
+        return {
+            "name": self.name,
+            "quantity": self.quantity,
+            "price_per_item": self.price_per_item,
+            "total_value": total_value,
+            "category" : self.category,
+            "supplier": self.supplier
+        }
+
+stock_item1 = stock("chairs", 100, 50, "furniture", "furniture world")
+stock_item2 = stock("Ball Pens", 300, 20, "stationry", "reyanolds")
+stock_item3 = stock("books", 300, 500, "textbooks", "oxford")
+stock_item4 = stock("fans" , 20 , 2000, " Electrical Appliances"," local electrical stores")
+stock_item5 = stock("Water Dispenser", 5, 15000, "Electrical Appliances", "blue star")
+
+print(stock_item1.get())
+print(stock_item2.get())
+print(stock_item3.get())
+print(stock_item4.get())
+print(stock_item5.get())
+
+
+
