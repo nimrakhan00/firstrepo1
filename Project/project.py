@@ -9,24 +9,28 @@ class Student(School):
         student_f_name,
         student_phone_number,
         student_address,
-        student_fees
+        student_fees,
+        student_exams,
+        student_class_name
         ):
         self.student_id = student_id
         self.student_name = student_name
         self.student_f_name = student_f_name
         self.student_phone_number = student_phone_number
         self.student_address = student_address
-        self.student_fees = student_fees   
+        self.student_fees = student_fees
+        self.student_exams = student_exams
+        self.student_class_name = student_class_name    
 
     def getStudent(self):    
-        return f"id = {self.student_id},name = {self.student_name},father name = {self.student_f_name},phone number = {self.student_phone_number},address = {self.student_address},fee = {self.student_fees}"     
+        return f"id = {self.student_id},name = {self.student_name},father name = {self.student_f_name},phone number = {self.student_phone_number},address = {self.student_address},fee = {self.student_fees},exams = {self.student_exams},classname = {self.class_name}"     
 
 class Teacher(School):
     def __init__(self,
         teacher_name,
         teacher_f_name,
         teacher_phone_name,
-        teacher_salary,
+        teacher_salary,         
         ):
         self.teacher_name = teacher_name
         self.teacher_f_name = teacher_f_name
@@ -56,24 +60,4 @@ class Exams(School):
     pass
   
 class Stock(School):
-    def __init__(self, name, quantity, price_per_item, category, supplier):
-        self.name = name
-        self.quantity = quantity
-        self.price_per_item = price_per_item
-        self.category = category 
-        self.supplier = supplier
-
-    def get(self):
-        total_value = self.quantity * self.price_per_item
-        return {
-            "name": self.name,
-            "quantity": self.quantity,
-            "price_per_item": self.price_per_item,
-            "total_value": total_value,
-            "category" : self.category,
-            "supplier": self.supplier
-        }
-
-
-
-
+    pass
